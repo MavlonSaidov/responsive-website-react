@@ -1,0 +1,342 @@
+.contact {
+  &__inner {
+    .contact__card {
+      margin-top: 30px;
+      background: linear-gradient(
+        180deg,
+        rgba(234, 238, 247, 0) 0%,
+        #eaeef7 100%
+      );
+      padding: 45px 31px 25px 31px;
+      display: flex;
+      &__box {
+        max-width: 60%;
+        width: 100%;
+        display: flex;
+        padding-right: 16px;
+        .contact__card__img__style {
+          width: 100%;
+          height: 100%;
+          .contact__card__img {
+            border: 10px solid #ffffff;
+            box-sizing: border-box;
+            max-width: 216px;
+            width: 100%;
+            position: relative;
+            height: 100%;
+            filter: drop-shadow(10px 14px 100px rgba(0, 0, 0, 0.1));
+
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              box-shadow: inset 19px -16px 64px rgba(0, 0, 0, 0.5),
+                inset -19px 16px 64px rgba(0, 0, 0, 0.5);
+              filter: drop-shadow(10px 14px 100px rgba(0, 0, 0, 0.1));
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        .contact__card__info {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding-left: 26px;
+          h3 {
+            color: #000000;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 25px;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+          }
+          p:nth-child(2) {
+            margin-top: 46px;
+          }
+          p {
+            color: #000000;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.5px;
+            display: flex;
+            margin-top: 15px;
+            align-items: center;
+            img {
+              width: 20px;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+
+      &__box:nth-child(2) {
+        max-width: 40%;
+        border-left: 1px solid #b6c5db;
+        width: 100%;
+        .contact__right {
+          padding: 0 10px 0 32px;
+          .contact__right__header {
+            display: flex;
+            align-items: center;
+
+            .contact-btn {
+              background: #0b0a6a;
+              color: #fff;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 23px;
+              text-decoration: none;
+              padding: 17px 48px;
+              position: relative;
+
+              span {
+                display: inline-block;
+                width: 13px;
+                height: 13px;
+                position: absolute;
+                bottom: -9px;
+                right: 80px;
+                transform: rotate(-45deg);
+                background-color: #0b0a6a;
+              }
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+
+            p {
+              font-style: normal;
+              font-weight: 600;
+              margin-left: 42px;
+              font-size: 20px;
+              line-height: 23px;
+              color: #0b0a6a;
+            }
+          }
+          .contact__right__accardion {
+            margin-top: 31px;
+            p {
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 26px;
+              max-height: 210px;
+              overflow: hidden;
+              letter-spacing: 0.7px;
+              color: #000000;
+              position: relative;
+            }
+            .contact__accardion__opacity {
+              position: absolute;
+              bottom: 0;
+              height: 140px;
+              width: 100%;
+              background: linear-gradient(
+                179.42deg,
+                rgba(234, 239, 246, 0) 0.5%,
+                rgba(234, 236, 246, 0.854167) 49.9%,
+                #eaeef6 104.72%
+              );
+              a {
+                position: absolute;
+                bottom: 0;
+                left: 45%;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 21px;
+                color: #0b0a6a;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .contact {
+    &__inner {
+      .contact__card {
+        &__box {
+          .contact__card__info {
+            h3 {
+              font-size: 12px;
+              line-height: 18px;
+            }
+
+            p:nth-child(2) {
+              margin-top: 10px;
+            }
+
+            p {
+              font-size: 12px;
+              margin: 0;
+            }
+          }
+        }
+
+        &__box:nth-child(2) {
+          .contact__right {
+            &__header {
+              .contact-btn {
+                padding: 5px 20px !important;
+                font-size: 15px !important;
+
+                span {
+                  right: 45px !important;
+                }
+              }
+              p {
+                font-size: 13px !important;
+                margin-left: 18px !important;
+              }
+            }
+            &__accardion {
+              p {
+                max-height: 190px !important;
+                height: 100%;
+                font-size: 10px !important;
+                line-height: 17px !important;
+              }
+
+              .contact__accardion__opacity {
+                height: 80px !important;
+                a {
+                  font-size: 12px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .contact {
+    &__inner {
+      .contact__card {
+        flex-direction: column;
+        &__box {
+          max-width: 100%;
+          padding-right: 0;
+          .contact__card__img__style {
+            height: auto;
+            .contact__card__img {
+              order: 1;
+            }
+          }
+          .contact__card__info {
+            order: 2;
+            h3 {
+              font-size: 13px !important;
+            }
+
+            p {
+              padding-top: 10px;
+              img {
+                width: 15px !important;
+              }
+            }
+          }
+        }
+
+        &__box:nth-child(2) {
+          margin-top: 20px;
+          max-width: 100%;
+          order: 2;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 567px) {
+  .contact {
+    &__inner {
+      .contact__card {
+        &__box {
+          .contact__card__info {
+            h3 {
+              font-size: 10px !important;
+            }
+
+            p {
+              font-size: 9px !important;
+              img {
+                width: 12px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .contact {
+    &__inner {
+      .contact__card {
+        &__box {
+          flex-direction: column;
+
+          .contact__card__img__style {
+            display: flex;
+            justify-content: center;
+            .contact__card__img {
+              margin: 0 0 20px 0;
+            }
+          }
+
+          .contact__card__info {
+            padding: 0;
+          }
+        }
+        &__box:nth-child(2) {
+          .contact__right {
+            padding: 0 10px;
+            &__header {
+              p {
+                line-height: 15px !important;
+              }
+
+              .contact-btn {
+                font-size: 13px !important;
+                line-height: 15px !important;
+                padding: 5px 15px !important;
+
+                span {
+                  right: 35px !important;
+                }
+              }
+            }
+
+            .contact__right__accardion {
+              .contact__accardion__opacity {
+                a {
+                  left: 40% !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

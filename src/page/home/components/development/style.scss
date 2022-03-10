@@ -1,0 +1,158 @@
+.grid {
+  padding-top: 70px;
+  margin-top: 163px !important;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 170px);
+    margin: 0 auto;
+    margin-top: 43px;
+  }
+}
+
+// this is for grid item backround
+%background {
+  content: "";
+  background: #85b0ff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.grid__item {
+  width: 100%;
+  position: relative;
+  color: #000;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 600;
+    text-align: center;
+    visibility: hidden;
+  }
+
+  // these childs for all grid size
+  &:nth-child(6),
+  &:nth-child(5),
+  &:nth-child(4),
+  &:nth-child(3) {
+    grid-row: span 2;
+  }
+  &:nth-child(10),
+  &:nth-child(7) {
+    grid-column: span 2;
+  }
+
+  //these childs for hover effects
+  &:nth-child(1),
+  &:nth-child(4),
+  &:nth-child(6),
+  &:nth-child(7),
+  &:nth-child(9) {
+    &::after {
+      @extend %background;
+      transition: all 0.3s ease-out;
+    }
+    span {
+      visibility: visible;
+      transition: all 0.3s ease-out;
+    }
+
+    &:hover {
+      span {
+        // visibility: hidden;
+        opacity: 0.9;
+      }
+      &::after {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(5),
+  &:nth-child(8),
+  &:nth-child(10) {
+    // &::after {
+    //   transition: all 0.3s ease-out;
+    // }
+    // span {
+    //   transition: all 0.3s ease-out;
+    // }
+
+    &:hover {
+      &::after {
+        @extend %background;
+        opacity: 0.9;
+      }
+      span {
+        visibility: visible;
+        opacity: 0.9;
+      }
+    }
+  }
+
+  //these childs for individual backgrounds
+  &:nth-child(4) {
+    &::after {
+      background: #f67e7e;
+    }
+  }
+  &:nth-child(6) {
+    &::after {
+      background: #fff;
+    }
+  }
+  &:nth-child(7) {
+    &::after {
+      background: #ffe195;
+    }
+  }
+  &:nth-child(9) {
+    &::after {
+      background: #69e1bd;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .grid__inner {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 170px);
+  }
+}
+@media screen and (max-width: 991px) {
+  .grid__inner {
+    grid-template-rows: repeat(8, 150px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .grid__inner {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(16, 130px);
+  }
+  .grid__item {
+    &:nth-child(10),
+    &:nth-child(7) {
+      grid-column: span 1;
+    }
+  }
+}

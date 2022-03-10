@@ -1,0 +1,31 @@
+.sidebar__socials {
+	@media(max-width: 567px) {
+		display: none;
+	}
+	
+	width: 100%;
+	display: grid;
+	justify-items: center;
+	row-gap: 45px;
+	margin-bottom: 104px;
+	.social-link {
+		display: block;
+		transition: all .3s ease;
+		&:hover {
+			transform: scale(1.3);
+		}
+	  &:last-child {
+		margin-bottom: 0;
+	  }
+	}
+  }
+
+
+  .sidebar__socials {
+	.social {
+		&:nth-child(1):hover {
+			fill: #0074D9;
+		}
+	}
+}
+  

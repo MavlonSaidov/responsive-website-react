@@ -1,0 +1,25 @@
+.books {
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 22px;
+        row-gap: 36px;
+        margin-top: 36px !important;
+    
+        @media screen and (max-width: 1199px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
+        @media screen and (max-width: 991px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+        @media screen and (max-width: 480px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__btn {
+        margin: 54px auto;
+    }
+}

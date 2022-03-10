@@ -1,0 +1,327 @@
+.mediatekaOne {
+  &__top {
+    .mediatekaTop__inner {
+      margin-bottom: 22px;
+      display: flex;
+      gap: 22px;
+      .mediatekaTop__card {
+        max-width: 50%;
+        width: 100%;
+
+        overflow: hidden;
+
+        &:hover {
+          cursor: pointer;
+          .mediatekaTop__background {
+            img:nth-child(1) {
+              transform: scale(1.05);
+              transition: all 0.3s linear;
+            }
+          }
+        }
+        .mediatekaTop__img {
+          position: relative;
+          .mediatekaTop__background {
+            width: 100%;
+            height: 617px;
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background: linear-gradient(
+                180.07deg,
+                #000000 -26.99%,
+                rgba(20, 20, 20, 0.705248) 10.43%,
+                rgba(56, 56, 56, 0.569779) 27.62%,
+                rgba(0, 0, 0, 0) 99.94%
+              );
+              transform: rotate(-180deg);
+            }
+            img:nth-child(1) {
+              width: 100%;
+              height: 100%;
+              transition: all 0.3s linear;
+              object-fit: cover;
+            }
+          }
+
+          .mediatekaTop__play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) !important;
+            img {
+              width: 75px;
+              height: 75px;
+            }
+          }
+
+          .mediatekaTop__p {
+            position: absolute;
+            bottom: 50px;
+            color: #fff;
+            padding: 0 77px 0 50px;
+            p {
+              font-style: normal;
+              font-weight: bold;
+              font-size: 34px;
+              line-height: 41px;
+              margin-bottom: 15px;
+            }
+            span {
+              font-style: normal;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 16px;
+              letter-spacing: 0.25px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    .mediatekaBottom__inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 20px;
+      gap: 21px;
+      .mediatekaBottom__card {
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+
+        &:hover {
+          cursor: pointer;
+          .mediatekaBottom__img__info {
+            img {
+              transform: scale(1.05);
+              transition: all 0.2s linear;
+            }
+          }
+        }
+        .mediatekaBottom__img {
+          position: relative;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.2s linear;
+          }
+
+          .mediatekaBottom__img__info {
+            height: 200px;
+            overflow: hidden;
+            width: 100%;
+          }
+          .mediatekaBottom__play {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        .mediatekaBottom__text {
+          padding: 24px;
+          p:nth-child(1) {
+            color: #960707;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 140%;
+            margin-bottom: 20px;
+          }
+          p:nth-child(2) {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 140%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .mediatekaOne {
+    &__top {
+      .mediatekaTop__inner {
+        .mediatekaTop__card {
+          .mediatekaTop__img {
+            .mediatekaTop__p {
+              p {
+                font-size: 28px;
+                line-height: 1.4;
+                margin-bottom: 15px;
+              }
+              span {
+                font-size: 14px;
+                line-height: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      .mediatekaBottom__inner {
+        .mediatekaBottom__card {
+          .mediatekaBottom__text {
+            p:nth-child(2) {
+              font-style: normal;
+              font-weight: bold;
+              font-size: 18px;
+              line-height: 140%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .mediatekaOne {
+    &__top {
+      .mediatekaTop__inner {
+        .mediatekaTop__card {
+          .mediatekaTop__img {
+            .mediatekaTop__background {
+              height: 380px;
+            }
+
+            .mediatekaTop__play {
+              img {
+                width: 50px;
+                height: 50px;
+              }
+            }
+            .mediatekaTop__p {
+              padding: 0 20px 0 30px;
+              bottom: 20px;
+              p {
+                font-size: 17px;
+                line-height: 1.4;
+                margin-bottom: 15px;
+              }
+              span {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.25px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      .mediatekaBottom__inner {
+        grid-template-columns: repeat(3, 1fr);
+
+        .mediatekaBottom__card {
+          .mediatekaBottom__text {
+            padding: 18px;
+            p:nth-child(2) {
+              font-size: 16px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .mediatekaOne {
+    &__top {
+      .mediatekaTop__inner {
+        flex-direction: column;
+        .mediatekaTop__card {
+          max-width: 100%;
+
+          .mediatekaTop__img {
+            .mediatekaTop__p {
+              bottom: 30px;
+              p {
+                font-size: 18px;
+                line-height: 1.4;
+              }
+              span {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      .mediatekaBottom__inner {
+        grid-template-columns: repeat(2, 1fr);
+        .mediatekaBottom__card {
+          .mediatekaBottom__text {
+            padding: 15px;
+
+            p:nth-child(1) {
+              margin-bottom: 10px;
+            }
+            p:nth-child(2) {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .mediatekaOne {
+    &__top {
+      .mediatekaTop__inner {
+        flex-direction: column;
+        .mediatekaTop__card {
+          .mediatekaTop__img {
+            .mediatekaTop__background {
+              height: 300px;
+            }
+            .mediatekaTop__p {
+              padding: 0 20px 0 20px;
+              bottom: 15px;
+              p {
+                font-size: 12px;
+                margin: 5px;
+              }
+              span {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      .mediatekaBottom__inner {
+        grid-template-columns: repeat(1, 1fr);
+        .mediatekaBottom__card {
+          .mediatekaBottom__text {
+            padding: 15px;
+            p:nth-child(2) {
+              font-style: normal;
+              font-weight: bold;
+              font-size: 18px;
+              line-height: 140%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

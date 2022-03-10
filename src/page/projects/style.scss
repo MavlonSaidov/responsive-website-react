@@ -1,0 +1,50 @@
+.project-goal__inner {
+    margin-bottom: 59px !important;
+}
+
+.projects__leaders {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 22px;
+    row-gap: 42px;
+    margin-top: 78px;
+    margin-bottom: 71px;
+
+    @media screen and (max-width: 1199px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 991px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 480px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.goal {
+    width: 66%;
+    &__title {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 45px;
+        line-height: 53px;
+        text-transform: uppercase;
+        color: #000000;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 33px;
+        letter-spacing: 0.6px;
+        color: #000000;
+        margin-top: 28px;
+    }
+}
+
+.projects__news {
+
+}

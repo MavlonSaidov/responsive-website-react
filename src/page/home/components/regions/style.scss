@@ -1,0 +1,186 @@
+.region-path {
+  fill: #4e5c87;
+  cursor: pointer;
+}
+
+.region-path:hover path {
+  fill: #2a66ce;
+}
+
+svg path {
+  stroke: hsla(0, 0%, 100%, 0.5);
+  transition: all ease 0.3s;
+}
+
+.region-path.\--active path {
+  fill: #2a66ce;
+}
+
+.regions_container {
+  margin-top: 104px !important;
+}
+
+.regions {
+  margin-top: 76px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.regions-map {
+  max-width: 900px;
+}
+
+.regions-info__card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 40px 40px 130px rgba(0, 0, 0, 0.07);
+  padding: 44px 64px;
+  margin: 5px;
+  &-title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    // font-size: calc(13px + 17 * (100vw / 1800));
+    line-height: 134.1%;
+    color: #1147ab;
+  }
+
+  &-subtitle {
+    font-style: normal;
+    // font-size: 21px;
+    font-size: calc(16px + 5 * (100vw / 1800));
+    line-height: 134.1%;
+    color: #1147ab;
+    margin-bottom: 55px;
+  }
+}
+
+.regions-info__card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .info-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    &__text {
+      // font-family: Gilroy;
+      font-style: normal;
+      font-weight: 500;
+      // font-size: 18px;
+      font-size: calc(12px + 6 * (100vw / 1800));
+      line-height: 22px;
+      color: #000000;
+      position: relative;
+      margin: 50px 0;
+      span {
+        display: block;
+        font-style: normal;
+        font-weight: 300;
+        // font-size: 48.34px;
+        font-size: calc(30px + 6 * (100vw / 1800));
+        line-height: 57px;
+        color: #000000;
+      }
+    }
+  }
+
+  .row {
+    height: 300px;
+    margin: 0 20px;
+  }
+
+  .info-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &__text {
+      // font-family: Gilroy;
+      font-style: normal;
+      font-weight: 500;
+      // font-size: 18px;
+      font-size: calc(12px + 6 * (100vw / 1800));
+      line-height: 22px;
+      color: #000000;
+      max-width: 100px;
+      span {
+        display: block;
+        font-style: normal;
+        font-weight: 300;
+        // font-size: 48.34px;
+        font-size: calc(30px + 6 * (100vw / 1800));
+        line-height: 57px;
+        color: #000000;
+      }
+    }
+
+    &__img {
+      margin: 50px 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1800px) {
+  .map-svg {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .regions {
+    flex-direction: column;
+  }
+
+  .regions-info {
+    margin-top: 70px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+
+  .regions-info {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .regions-map {
+    margin-top: -70px;
+  }
+
+  .regions-info {
+    margin-top: -50px;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .regions-map {
+    margin-top: -140px;
+  }
+
+  .regions-info {
+    margin-top: -90px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .regions-map {
+    margin-top: -190px;
+  }
+
+  .regions-info {
+    margin-top: -140px;
+  }
+
+  .regions-info__card {
+    padding: 44px 35px;
+  }
+
+  .regions-info__card-subtitle {
+    margin: 15px;
+  }
+}

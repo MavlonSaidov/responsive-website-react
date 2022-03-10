@@ -1,0 +1,196 @@
+.laboratory {
+  margin-top: 103px !important;
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .laboratory__content {
+    .laboratory__header {
+      position: relative;
+      border-bottom: 2px solid rgba(3, 63, 67, 0.2);
+      max-width: 610px;
+      width: 100%;
+      span {
+        height: 2px;
+        position: absolute;
+        background-color: #1147ab;
+        width: 30%;
+        bottom: 0px;
+      }
+
+      h1 {
+        color: #1147ab;
+        font-size: 36px;
+        height: 100%;
+        width: 100%;
+        margin-bottom: 19px;
+        padding-right: 10px;
+      }
+    }
+
+    .laboratory__card__box-p {
+      padding: 28px 75px 0 0;
+      p:nth-child(1) {
+        margin-bottom: 20px;
+      }
+      p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 417px;
+    overflow: hidden;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+      img {
+        transform: scale(1.05);
+        transition: all 0.3s linear;
+      }
+    }
+    img {
+      transition: all 0.3s linear;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .laboratory__img1 {
+      position: absolute;
+    }
+    .laboratory__background1 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: rgb(30, 28, 9);
+      background: linear-gradient(
+        0deg,
+        rgba(30, 28, 9, 1) 0%,
+        rgba(204, 190, 61, 0.5) 100%,
+        rgba(207, 193, 62, 1) 100%
+      );
+    }
+
+    .laboratory__img2 {
+      position: absolute;
+    }
+    .laboratory__background2 {
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 16%,
+        rgba(242, 31, 31, 0.5) 70%
+      );
+      width: 100%;
+      position: absolute;
+      height: 100%;
+    }
+
+    .laboratory__img3 {
+      position: absolute;
+    }
+    .laboratory__background3 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: rgb(17, 72, 172);
+      background: linear-gradient(
+        180deg,
+        rgba(17, 72, 172, 0.4) 0%,
+        rgba(2, 8, 19, 1) 100%
+      );
+    }
+
+    p {
+      position: absolute;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 45px;
+      letter-spacing: 0.25px;
+      color: #fff;
+      bottom: 46px;
+      padding: 0 51px 0 84px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .laboratory__inner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .laboratory__content {
+    grid-column: span 3;
+    margin-bottom: 25px;
+  }
+
+  .laboratory__image {
+    height: 350px;
+
+    p {
+      font-size: 21px;
+      line-height: 1;
+      padding: 0 20px 0 20px;
+    }
+
+    .laboratory__img2 {
+      object-position: right;
+    }
+
+    .laboratory__img3 {
+      object-position: left;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .laboratory__inner {
+    grid-template-columns: 1fr;
+  }
+  .laboratory__box {
+    grid-column: 1;
+    height: 300px;
+    overflow: hidden;
+
+    .laboratory__image {
+      height: 100%;
+    }
+  }
+
+  .laboratory__card__box-p {
+    padding: 28px 40px 0 0 !important;
+
+    p {
+      font-size: 15px !important;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .laboratory__card__box-p {
+    padding: 28px 10px 0 0 !important;
+    p {
+      line-height: 24px !important;
+    }
+  }
+  .laboratory__box {
+    height: 200px;
+    overflow: hidden;
+
+    .laboratory__image {
+      height: 100%;
+
+      p {
+        font-size: 15px;
+        line-height: 24px;
+        bottom: 27px;
+      }
+    }
+  }
+}

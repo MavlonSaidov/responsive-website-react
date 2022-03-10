@@ -1,0 +1,73 @@
+.sidebar__eye {
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 7;
+    cursor: pointer;
+    padding: 0px 25px;
+    width: 90px;
+    height: 70px;
+    svg {
+        transition: all 0.2s ease;
+        width: 100%;
+        height: 100%;
+        path {
+            stroke: white;
+        }
+        &:hover {
+            path {
+                stroke: #508bff;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        width: 70px;
+        height: 70px;
+        padding: 0 18px;
+    }
+    @media (max-width: 991px) {
+        height: 50px;
+        width: 50px;
+        padding: 0 11px;
+        margin: 15px 0;
+    }
+    @media (max-width: 767px) {
+        display: none;
+    }
+
+    .eye__options {
+        position: absolute;
+        z-index: 6;
+        display: flex;
+        width: auto;
+        cursor: pointer;
+        position: absolute;
+        font-size: 24px;
+        font-weight: 700;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 90px;
+        background: rgb(168, 168, 168);
+        color: #fff;
+        visibility: hidden;
+        z-index: 6;
+
+        &.eye__show {
+            visibility: visible;
+        }
+
+        .eye__option {
+            border: 1px solid rgb(243, 243, 243);
+            padding: 20px 18px;
+            background: #fff;
+            color: rgb(100, 100, 100);
+            &:hover {
+                transition: all 0.2s ease;
+                color: #508bff;
+            }
+        }
+    }
+}

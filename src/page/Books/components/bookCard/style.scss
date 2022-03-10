@@ -1,0 +1,304 @@
+.book-card {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    min-height: 240px;
+    max-height: 246px;
+    height: 100%;
+    padding: 26px 26px 32px 26px;
+    background: #FFFFFF;
+    box-shadow: 10px 20px 70px rgba(0, 0, 0, 0.04);
+    border-radius: 0px 0px 4px 4px;
+    position: relative;
+    text-decoration: none;
+
+    &__text {
+        font-style: normal;
+        font-weight: 600;
+        line-height: 25px;
+        letter-spacing: 0.1px;
+        color: #000000;
+        font-size: 20px;
+        
+        @media (max-width: 1300px) {
+            font-size: 18px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: calc(16px - 1 * (100vw / 1800));
+        }
+    }
+
+    &__line {
+        position: absolute;
+        bottom: -4px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 6px;
+        border-radius: 6px;
+        display: block;
+    }
+}
+
+.doc {
+    position: relative;
+    &:before {
+        content: "";
+        background-image: url('../../../../assets/images/icons/file_doc.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 44px;
+        height: 60px;
+        position: absolute;
+        top: 27px;
+        left: 27px;
+    }
+
+    &:after {
+        content: "";
+        background-image: url('../../../../assets/images/icons/downloadBlue.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        top: 37px;
+        right: 21px;
+    }
+
+    .book-card__line {
+        background-color: #A6C5FA;
+    }
+}
+
+.pdf {
+    position: relative;
+    &:before {
+        content: "";
+        background-image: url('../../../../assets/images/icons/file_pdf.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 44px;
+        height: 60px;
+        position: absolute;
+        top: 27px;
+        left: 27px;
+    }
+
+    &:after {
+        content: "";
+        background-image: url('../../../../assets/images/icons/downloadRed.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        top: 37px;
+        right: 21px;
+    }
+    .book-card__line {
+        background-color: #FFA7A7;
+    }
+}
+
+.xls {
+    position: relative;
+    &:before {
+        content: "";
+        background-image: url('../../../../assets/images/icons/file_xls.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 44px;
+        height: 60px;
+        position: absolute;
+        top: 27px;
+        left: 27px;
+    }
+
+    &:after {
+        content: "";
+        background-image: url('../../../../assets/images/icons/downloadGreen.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        top: 37px;
+        right: 21px;
+    }
+    .book-card__line {
+        background-color: #8ED1B1;
+    }
+}
+
+.ppt {
+    position: relative;
+    &:before {
+        content: "";
+        background-image: url('../../../../assets/images/icons/file_ppt.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 44px;
+        height: 60px;
+        position: absolute;
+        top: 27px;
+        left: 27px;
+    }
+
+    &:after {
+        content: "";
+        background-image: url('../../../../assets/images/icons/downloadViolet.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        top: 37px;
+        right: 21px;
+    }
+
+    .book-card__line {
+        background-color: #B7A2DD;
+    }
+}
+
+.jpeg {
+    position: relative;
+    &:before {
+        content: "";
+        background-image: url('../../../../assets/images/icons/file_jpeg.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 44px;
+        height: 60px;
+        position: absolute;
+        top: 27px;
+        left: 27px;
+    }
+
+    &:after {
+        content: "";
+        background-image: url('../../../../assets/images/icons/downloadBlue.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        top: 37px;
+        right: 21px;
+    }
+
+    .book-card__line {
+        background-color: #A6C5FA;
+    }
+}
+
+.xlsx {
+    position: relative;
+    &:before {
+        content: "";
+        background-image: url('../../../../assets/images/icons/file_xlsx.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 44px;
+        height: 60px;
+        position: absolute;
+        top: 27px;
+        left: 27px;
+    }
+
+    &:after {
+        content: "";
+        background-image: url('../../../../assets/images/icons/downloadRed.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        top: 37px;
+        right: 21px;
+    }
+
+    .book-card__line {
+        background-color: #FFA7A7;
+    }
+}
+
+.docx {
+    position: relative;
+    &:before {
+        content: "";
+        background-image: url('../../../../assets/images/icons/file_docx.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 44px;
+        height: 60px;
+        position: absolute;
+        top: 27px;
+        left: 27px;
+    }
+
+    &:after {
+        content: "";
+        background-image: url('../../../../assets/images/icons/downloadGreen.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        top: 37px;
+        right: 21px;
+    }
+
+    &:after {
+        content: "";
+        background-image: url('../../../../assets/images/icons/downloadGreen.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        top: 37px;
+        right: 21px;
+    }
+
+    .book-card__line {
+        background-color: #8ED1B1;
+    }
+}
+
+.mp3 {
+    position: relative;
+    &:before {
+        content: "";
+        background-image: url('../../../../assets/images/icons/file_mp3.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 44px;
+        height: 60px;
+        position: absolute;
+        top: 27px;
+        left: 27px;
+    }
+
+    &:after {
+        content: "";
+        background-image: url('../../../../assets/images/icons/downloadViolet.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        top: 37px;
+        right: 21px;
+    }
+
+    .book-card__line {
+        background-color: #B7A2DD;
+    }
+}

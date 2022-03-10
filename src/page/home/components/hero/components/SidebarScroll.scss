@@ -1,0 +1,76 @@
+.sidebar__scroll {
+	@media(max-width: 567px) {
+		display: none;
+	}
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+
+  &-mouse {
+	position: relative;
+	display: block;
+	width: 35px;
+	height: 61px;
+	border: 3px solid #fff;
+	border-radius: 40px;
+	padding-bottom: 13px;
+	margin-bottom: 13px;
+
+	@keyframes down {
+	  0% {
+		transform: translateY(10%);
+	  }
+	  50% {
+		transform: translateY(100%);
+	  }
+	  100% {
+		transform: translateY(10%);
+	  }
+   }
+
+	div {
+	  position: absolute;
+	  top: 10px;
+	  left: 13px;
+	  width: 4px;
+	  height: 12px;
+	  background: #fff;
+	  animation: down 2s linear infinite;
+	}
+  }
+
+  &-dots {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	div {
+	  background: #ffffff;
+	  border-radius: 50px;
+
+	  &:nth-child(1) {
+		width: 10px;
+		height: 10px;
+		opacity: 0.6;
+	  }
+	  &:nth-child(2) {
+		width: 6px;
+		height: 6px;
+		opacity: 0.34;
+		margin: 9px 0;
+	  }
+	  &:nth-child(3) {
+		width: 4px;
+		height: 4px;
+		opacity: 0.3;
+	  }
+	}
+  }
+
+  &-arrow {
+	  margin: 15px auto 0 auto;
+	  animation: down 2s linear infinite;
+  }
+}
+
